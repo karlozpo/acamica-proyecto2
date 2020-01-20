@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+
+body {
+  background-color: #fef4fd; }
+
+.centrado {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.contenedor {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+.contenedor2 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.top_35 {
+  margin-top: 35px; }
+
+.margin_left_16 {
+  margin-right: 16px; }
+
+.espaciar_elementos {
+  justify-content: space-between; }
+
+.tieneWrap {
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.button {
+  font-family: "Chakra Petch", sans-serif;
+  background: #f7c9f3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; }
+  .button:hover {
+    border-style: dotted; }
+
+.dropdown select {
+  background: #f7c9f3;
+  font-family: "Chakra Petch", sans-serif;
+  width: 131px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0 !important;
+  height: 53px;
+  background: url(../assets/dropdown.svg) no-repeat right #f7c9f3;
+  -webkit-appearance: none;
+  background-position-x: x-end;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+
+.sup_header {
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  box-shadow: 0 1px 0 0 #110038;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0;
+  height: 23px; }
+  .sup_header marquee {
+    margin-top: 4px; }
+
+/*# sourceMappingURL=styles.css.map */
