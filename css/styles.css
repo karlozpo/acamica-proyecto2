@@ -48,23 +48,36 @@ body {
   display: inline-block;
   font-size: 16px; }
   .button:hover {
-    border-style: dotted; }
+    outline: 1px dotted #110038;
+    outline-offset: -5px; }
 
 .dropdown select {
   background: #f7c9f3;
   font-family: "Chakra Petch", sans-serif;
-  width: 131px;
   padding: 5px;
+  padding-right: 72px;
+  padding-left: 25px;
   font-size: 16px;
   line-height: 1;
   border: 0;
   border-radius: 0 !important;
   height: 53px;
-  background: url(../assets/dropdown.svg) no-repeat right #f7c9f3;
+  background: url(../assets/dropdown_2.svg) no-repeat right #f7c9f3;
   -webkit-appearance: none;
   background-position-x: x-end;
   border: 1px solid #110038;
-  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  text-align: center;
+  text-align-last: center; }
+
+.textos_links {
+  font-family: "Chakra Petch", sans-serif;
+  align-self: center; }
+  .textos_links a {
+    font-family: "Chakra Petch", sans-serif;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .sup_header {
   background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
