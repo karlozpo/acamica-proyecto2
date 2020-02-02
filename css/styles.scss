@@ -2,9 +2,14 @@ $colorfondo_rosa: #fef4fd;
 $colorfondo_azul: #110038;
 $color_azul: #110038;
 $color_rosa: #f7c9f3;
+$color_morado:#EE3EFE;
 $color_gris: #e6e6e6;
 $degradado_linear: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+$degradado_linear2: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 $fuente_regular: "Chakra Petch", sans-serif;
+$transicion_todo: ease .3s all;
+
+
 
 * {
   margin: 0px;
@@ -13,6 +18,19 @@ $fuente_regular: "Chakra Petch", sans-serif;
 }
 body {
   background-color: $colorfondo_rosa;
+  transition: $transicion_todo;
+  &.dark{
+    background-color:$colorfondo_azul;
+  }
+}
+.logo{
+  width: 90px;
+  height: 48px;
+  background-image: url("../assets/gifOF_logo.png");
+  transition: $transicion_todo;
+  body.dark &{
+    background-image: url("../assets/gifOF_logo_dark.png");
+  }
 }
 .centrado {
   width: 80%;
@@ -56,10 +74,15 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-
+  transition: $transicion_todo;
   &:hover {
     outline: 1px dotted #110038;
     outline-offset: -5px;
+  }
+  body.dark &{
+    background: $color_morado;
+    color: white;
+
   }
 }
 .dropdown select {
@@ -88,11 +111,17 @@ body {
 .textos_links {
   font-family: $fuente_regular;
   align-self: center;
+  margin-left: 10px;
+  transition: $transicion_todo;
   & a {
+    transition: $transicion_todo;
     font-family: $fuente_regular;
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
+    body.dark &{
+      color: white;
+    }
   }
 }
 
@@ -104,8 +133,117 @@ body {
   color: #ffffff;
   letter-spacing: 0;
   height: 23px;
+  transition: $transicion_todo;
+  body.dark &{
+    background-image: $degradado_linear2;
+  }
 
   marquee {
     margin-top: 4px;
   }
 }
+// INICIA EL MENU DEL DROPDOWN SELECT//
+.custom-select {
+  position: relative;
+  font-family: $fuente_regular;
+  width: 180px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #f7c9f3;
+  background-image: url("../assets/dropdown_2.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  text-align: left;
+  text-align-last: left;
+  transition: $transicion_todo;
+  body.dark &{
+    background-color:$color_morado;
+    color: white;
+    background-image: url("../assets/dropdown_3.svg");
+  }
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 24px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+  
+  body.dark &{
+  
+    border-color: white transparent transparent transparent;
+  }
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 16px;
+  body.dark &{
+    top: 24px;
+    border-color: white transparent transparent transparent;
+  }
+}
+
+/* style the items (options), including the selected item: */
+.select-items div{
+  color: #000000;
+  padding: 15px 16px;
+  border: 1px solid 000000;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.select-selected {
+  color: #000000;
+  padding: 15px 16px;
+  border: 1px solid 000000;
+  cursor: pointer;
+  text-align: left;
+  
+}
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #E6E6E6;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  
+}
+.backmenu{
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+}
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  outline: 1px solid #CCA6C9;
+      outline-offset: -5px ;
+      background-image: url("../assets/btn_white.jpg");
+      background-repeat: no-repeat;
+      background-position:5px 5px;
+      body.dark &{
+        outline: 1px solid white;
+        background-image: url("../assets/btn_blue.jpg");
+        color: white;
+      }
+}
+// ACABA EL MENU DEL DROPDOWN SELECT//

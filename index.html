@@ -17,25 +17,48 @@
     </div>
     <div class="container_site centrado top_35">
         <header class="contenedor espaciar_elementos">
-            <div class="logo"><img src="assets/gifOF_logo.png" alt="Logo gif"></div>
+            <div class="logo"></div>
             <div class="botones_gif contenedor2">
                 <div class="margin_left_16">
                     <a href="#" class="button">Crear Gif</a>
                 </div>
-                <div class="dropdown margin_left_16">
-                    <select>
-                        <option value="volvo" selected="selected">Elegir Tema</option>
-                        <option value="saab">Light</option>
-                        <option value="opel">Dark</option>
-                      </select>
-                </div>
-                <div class="textos_links">
+                
+                <div class="custom-select">
+                    <select onchange="wow(this.value)">
+                      <option value="0">Elegir tema:</option>
+                      
+                      <option value="light" class="btn1">Light</option>
+                      <option value="dark" class="btn1">Dark</option>
+
+                    </select>
+                  </div>
+                  <div class="textos_links">
                     <a href="">mis gifos</a> 
                 </div>
+                
             </div>
+            
         </header>
+
+        
     </div>
+    <script src="js/menu.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function wow(value) {
+            switch (value) {
+                case "light":
+                    document.body.classList.remove("dark");
+                    alert("light");
+                    break;
+                case "dark":
+                    document.body.classList.add("dark");
+                    alert("dark");
+                    break;
+            }
+        }
+        </script>
+
 </body>
 
 </html>
