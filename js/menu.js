@@ -89,3 +89,56 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 
+
+
+
+
+///CAMBIAR COLOR DEL THEMA
+
+function wow(value) {
+  switch (value) {
+      case "light":
+          document.body.classList.remove("dark");
+          alert("light");
+          break;
+      case "dark":
+          document.body.classList.add("dark");
+          alert("dark");
+          break;
+  }
+}
+
+//LLAMAR GIFS
+
+const url = 'https://api.giphy.com/v1/gifs/search?';
+const apiKey = 'api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&q=';
+let searchResult='default';
+let numbersofGifs="3";
+
+
+function search() {
+    document.getElementById("gifsContainer").innerHTML = "";
+searchResult =document.getElementById("buscador").value;  
+
+const getUrls = async () => {
+const response = await fetch(url+apiKey+searchResult+"&limit="+numbersofGifs+"&offset=0&rating=G&lang=es", { method: 'get' });
+const json = await response.json();
+return json.data.map(data => data.images.original.url);
+}
+
+getUrls().then(urls => {
+    
+urls.forEach((url) => {
+   let divContenedor=document.createElement("div");
+   let imgContenedor=document.createElement("img");
+   imgContenedor.setAttribute("src", url);
+   imgContenedor.setAttribute("width", "480");
+   console.log(url);
+   divContenedor.appendChild(imgContenedor);
+document.getElementById("gifsContainer").appendChild(divContenedor);
+
+});
+});
+
+
+}
