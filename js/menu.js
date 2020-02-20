@@ -113,7 +113,7 @@ function wow(value) {
 const url = 'https://api.giphy.com/v1/gifs/search?';
 const apiKey = 'api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&q=';
 let searchResult='default';
-let numbersofGifs="3";
+let numbersofGifs="10";
 
 
 function search() {
@@ -131,8 +131,9 @@ getUrls().then(urls => {
 urls.forEach((url) => {
    let divContenedor=document.createElement("div");
    let imgContenedor=document.createElement("img");
+   divContenedor.classList.add("cuadroGif");
    imgContenedor.setAttribute("src", url);
-   imgContenedor.setAttribute("width", "480");
+   imgContenedor.setAttribute("width", "auto");
    console.log(url);
    divContenedor.appendChild(imgContenedor);
 document.getElementById("gifsContainer").appendChild(divContenedor);
@@ -141,4 +142,12 @@ document.getElementById("gifsContainer").appendChild(divContenedor);
 });
 
 
+}
+
+
+/// key press buscador
+document.getElementById('buscador').onkeypress = function(e) {
+  if(e.keyCode == 13) {
+      search();
+  }
 }
