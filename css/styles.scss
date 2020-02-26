@@ -159,7 +159,7 @@ justify-content: space-between;
 input{
   margin-left: 10px;
   margin-top: 10px;
-  width: 860px;
+  width: 80%;
   height: 30px;
   padding-left: 10px;
 }
@@ -171,7 +171,7 @@ button{
 border: 1px solid #808080;
 box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 height: 36px;
-width: 102px;
+width: 15%;
 margin-right: 10px;
 margin-top: 5px;
 &:hover{
@@ -199,12 +199,29 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     
   }
 }
-
+h3{
+  background: #FFFAFE;
+border: 1px solid #E6BBE2;
+box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+font-family: $fuente_regular;
+font-size: 14px;
+font-weight: 100;
+color: #110038;
+letter-spacing: 0;
+padding: 5px;
+}
 .cuadroGif{
   width: 250px;
   height: 250px;
+  margin-top: 10px;
   img{
-    width: 100%;
+    width: 250px;
+  height: 100%;
+
+  }
+  &:hover{
+    background: #B4B4B4;
+box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF;
   }
 }
 
@@ -316,3 +333,33 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
       }
 }
 // ACABA EL MENU DEL DROPDOWN SELECT//
+
+@media (max-width: 575.98px) { 
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+  .cuadroGif{
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+    img{
+      width: 250px;
+    height: 100%;
+  
+    }
+   
+  }
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+
+}

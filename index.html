@@ -22,47 +22,49 @@
                 <div class="margin_left_16">
                     <a href="#" class="button">Crear Gif</a>
                 </div>
-                
+
                 <div class="custom-select">
                     <select onchange="wow(this.value)">
-                      <option value="0">Elegir tema:</option>
-                      
-                      <option value="light" class="btn1">Light</option>
-                      <option value="dark" class="btn1">Dark</option>
+                        <option value="0">Elegir tema:</option>
+
+                        <option value="light" class="btn1">Light</option>
+                        <option value="dark" class="btn1">Dark</option>
 
                     </select>
-                  </div>
-                  <div class="textos_links">
-                    <a href="">mis gifos</a> 
                 </div>
-                
-            </div>
-            
-        </header>
-<div class="contenido">
-    <div class="buscador_gif">
-        <div class="tituloBuscador">Buscar</div>
-        <div class="container_search">
-            <div>
-    <input id="buscador" type="text" name="fname" value="" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-</div>
-<div>
-<button onclick="search()">Buscar</button>
-</div>
-</div>
-</div>
-<div id="gifsContainer" class="contenedor_gifs">
+                <div class="textos_links">
+                    <a href="">mis gifos</a>
+                </div>
 
+            </div>
+
+        </header>
+        <div class="contenido">
+            <div class="buscador_gif">
+                <div class="tituloBuscador">Buscar</div>
+                <div class="container_search">
+
+                    <input id="buscador" type="text" name="fname" value=""
+                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <button onclick="search()">Buscar</button>
+
+                </div>
+            </div>
+            <div id="gifsContainer" class="contenedor_gifs"></div>
+<h3>Hoy te sugerimos</h3>
+<div id="gifsSugerencias" class="contenedor_gifs">
 </div>
-    
-</div>
-        
+<h3>Tendencias</h3>
+<div id="gifsTendencias" class="contenedor_gifs">
+
+        </div>
+
     </div>
     <script src="js/menu.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-       
-        </script>
+
+    </script>
 
 </body>
 
