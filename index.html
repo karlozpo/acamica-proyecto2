@@ -46,25 +46,43 @@
 
                     <input id="buscador" type="text" name="fname" value=""
                         placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                    <button onclick="search()">Buscar</button>
+                        <button onclick="search()"><a href="#hola">Buscar</a></button>
+                    
 
                 </div>
             </div>
             <div id="gifsContainer" class="contenedor_gifs"></div>
-<h3>Hoy te sugerimos</h3>
-<div id="gifsSugerencias" class="contenedor_gifs">
-</div>
-<h3>Tendencias</h3>
-<div id="gifsTendencias" class="contenedor_gifs">
+            <h3 class="espaciado2">Hoy te sugerimos</h3>
+            <div id="gifsSugerencias" class="contenedor_gifs">
+                <div class="cuadroGif borde">
+                    <div class="tituloTrending"></div>
+                    <img class="imgtrend" src="" alt="" width="auto">
+                </div>
+                <div id="sug2" class="cuadroGif borde">
+                    <div class="tituloTrending"></div>
+                    <img class="imgtrend" src="" alt="" width="auto">
+                </div>
+                <div id="sug3" class="cuadroGif borde">
+                    <div class="tituloTrending"></div>
+                    <img class="imgtrend" src="" alt="" width="auto">
+                </div>
+                <div id="sug4" class="cuadroGif">
+                    <div class="tituloTrending"></div>
+                    <img class="imgtrend" src="" alt="" width="auto">
+                </div>
 
+            </div>
+            <h3 id="tendencias" class="espaciado">Tendencias</h3>
+            <div id="gifsTendencias" class="contenedor_gifs">
+
+            </div>
+            <h3 name="hola" id="hola" class="espaciado">Tendencias</h3>
         </div>
+        <script src="js/menu.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
 
-    </div>
-    <script src="js/menu.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-
-    </script>
+        </script>
 
 </body>
 

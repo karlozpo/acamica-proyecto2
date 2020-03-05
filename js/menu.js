@@ -113,14 +113,19 @@ function wow(value) {
 const url = 'https://api.giphy.com/v1/gifs/search?';
 const apiKey = 'api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&q=';
 let searchResult = 'trending';
-let numbersofGifs = "4";
+let numbersofGifs = "8";
 
 
 
 
 function search() {
-  document.getElementById("gifsContainer").innerHTML = "";
-    searchResult = document.getElementById("buscador").value;
+  document.getElementById("gifsTendencias").innerHTML = "";
+
+  
+   searchResult = document.getElementById("buscador").value;
+   let textTendencias= document.getElementById("tendencias");
+   textTendencias.innerHTML=searchResult;
+  
 
   const getUrls = async () => {
     const response = await fetch(url + apiKey + searchResult + "&limit=" + numbersofGifs + "&offset=0&rating=G&lang=es", {
@@ -133,14 +138,15 @@ function search() {
   getUrls().then(urls => {
 
     urls.forEach((url) => {
+      
       let divContenedor = document.createElement("div");
       let imgContenedor = document.createElement("img");
       divContenedor.classList.add("cuadroGif");
       imgContenedor.setAttribute("src", url);
       imgContenedor.setAttribute("width", "auto");
-      console.log(url);
+      
       divContenedor.appendChild(imgContenedor);
-      document.getElementById("gifsContainer").appendChild(divContenedor);
+      document.getElementById("gifsTendencias").appendChild(divContenedor);
 
     });
   });
@@ -148,7 +154,8 @@ function search() {
 
 }
 
-search();
+
+
 
 /// key press buscador
 document.getElementById('buscador').onkeypress = function (e) {
@@ -156,3 +163,65 @@ document.getElementById('buscador').onkeypress = function (e) {
     search();
   }
 }
+
+const url2= "https://api.giphy.com/v1/gifs/trending?api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&limit=";
+let numbersofGifs2 = "8";
+
+
+function trending() {
+  document.getElementById("gifsTendencias").innerHTML = "";
+
+  const getUrls2 = async () => {
+    const response2 = await fetch(url2 + numbersofGifs2 + "&rating=G", {
+      method: 'get'
+    });
+
+    const json2 = await response2.json();
+    return json2.data.map(data => data.images.fixed_width.url);
+  }
+
+  getUrls2().then(urls => {
+
+    urls.forEach((url2) => {
+      let divContenedor = document.createElement("div");
+      let imgContenedor = document.createElement("img");
+      divContenedor.classList.add("cuadroGif");
+      imgContenedor.setAttribute("src", url2);
+      imgContenedor.setAttribute("width", "auto");
+      
+      divContenedor.appendChild(imgContenedor);
+      document.getElementById("gifsTendencias").appendChild(divContenedor);
+
+    });
+  });
+// llamar tendrig Principales
+
+
+
+  const getUrls3 = async () => {
+    const response3 = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&offset=8&limit=4&rating=G", {
+      method: 'get'
+    });
+    
+    const json3 = await response3.json();
+   
+    return json3.data.map(function (data,index) {
+      
+      let x=document.getElementsByClassName("imgtrend");
+      x[index].setAttribute("src",data.images.fixed_width.url);
+      let y=document.getElementsByClassName("tituloTrending");
+      let titular=data.title;
+      let hashtag="#"+titular.replace(/ .*/,'');
+      y[index].innerHTML=hashtag;
+      console.log(index);
+      return null;
+    })
+    
+  }
+  getUrls3().then(function () {
+
+  });
+
+}
+
+trending();

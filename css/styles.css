@@ -99,6 +99,10 @@ body {
     body.dark .textos_links a {
       color: white; }
 
+.imgtrend {
+  outline: 2px solid gray;
+  outline-offset: -2px; }
+
 .sup_header {
   background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
   box-shadow: 0 1px 0 0 #110038;
@@ -117,6 +121,28 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
+
+#gifsTendencias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+#gifsSugerencias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.tituloTrending {
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  height: 24px;
+  color: white;
+  font-family: "Chakra Petch", sans-serif;
+  padding-left: 5px;
+  padding-top: 5px;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+
+.borde {
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
 
 .buscador_gif {
   margin-top: 60px;
@@ -170,6 +196,12 @@ h3 {
   letter-spacing: 0;
   padding: 5px; }
 
+.espaciado {
+  margin-top: 35px; }
+
+.espaciado2 {
+  margin-top: 15px; }
+
 .cuadroGif {
   width: 250px;
   height: 250px;
@@ -177,9 +209,6 @@ h3 {
   .cuadroGif img {
     width: 250px;
     height: 100%; }
-  .cuadroGif:hover {
-    background: #B4B4B4;
-    box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF; }
 
 .gifsContainer {
   margin-top: 30px; }
@@ -277,7 +306,8 @@ h3 {
   .cuadroGif {
     width: 250px;
     height: 250px;
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-top: 40px; }
     .cuadroGif img {
       width: 250px;
       height: 100%; } }
