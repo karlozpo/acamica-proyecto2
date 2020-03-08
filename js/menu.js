@@ -93,7 +93,7 @@ then close all select boxes: */
 
 
 
-///CAMBIAR COLOR DEL THEMA
+///CAMBIAR COLOR DEL TEMA
 
 function wow(value) {
   switch (value) {
@@ -108,14 +108,27 @@ function wow(value) {
   }
 }
 
-//LLAMAR GIFS
+//BUSCAR GIFS
 
 const url = 'https://api.giphy.com/v1/gifs/search?';
 const apiKey = 'api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&q=';
 let searchResult = 'trending';
 let numbersofGifs = "8";
 
+// Sugerencias de busqueda
+let buscadorTrendings= document.getElementById("buscador");
+let titulosSugeridos= document.getElementById("resultados");
+buscadorTrendings.addEventListener("focus",function () {
+document.getElementById("sugerencias").setAttribute("style","margin-top:120px");
+titulosSugeridos.style.display="block";
+})
+buscadorTrendings.addEventListener("focusout",function () {
+  document.getElementById("sugerencias").setAttribute("style","margin-top:15px");
+  titulosSugeridos.style.display="none";
+  })
 
+
+//crear hashtag
 
 
 function search() {
@@ -132,11 +145,14 @@ function search() {
       method: 'get'
     });
     const json = await response.json();
+    
     return json.data.map(data => data.images.fixed_width.url);
   }
 
   getUrls().then(urls => {
-
+    var elmnt = document.getElementById("hola");
+    elmnt.scrollIntoView();
+    console.log(elmnt);
     urls.forEach((url) => {
       
       let divContenedor = document.createElement("div");
@@ -167,7 +183,7 @@ document.getElementById('buscador').onkeypress = function (e) {
 const url2= "https://api.giphy.com/v1/gifs/trending?api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&limit=";
 let numbersofGifs2 = "8";
 
-
+//LLAMAR TRENDINGS
 function trending() {
   document.getElementById("gifsTendencias").innerHTML = "";
 
@@ -194,26 +210,33 @@ function trending() {
 
     });
   });
-// llamar tendrig Principales
-
-
-
+// LLAMAR TOPICOS PRINCIPALES CON HASHTAGS
   const getUrls3 = async () => {
     const response3 = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=HfFHI1IWTIBPUa7JgXcE0M67VgBCex81&offset=8&limit=4&rating=G", {
       method: 'get'
     });
     
     const json3 = await response3.json();
-   
+   //el parametro index me dice el nimero de interaciones que realiza el MAP
     return json3.data.map(function (data,index) {
       
       let x=document.getElementsByClassName("imgtrend");
       x[index].setAttribute("src",data.images.fixed_width.url);
       let y=document.getElementsByClassName("tituloTrending");
+      //crear hashtag
       let titular=data.title;
       let hashtag="#"+titular.replace(/ .*/,'');
+       //crear Url del ver más
+      let mas=document.getElementsByClassName("masLink");
+      mas[index].setAttribute("href","https://giphy.com/search/"+titular.replace(/ .*/,''));
       y[index].innerHTML=hashtag;
-      console.log(index);
+      
+      let topic=document.getElementsByClassName("tendencia");
+      topic[index].innerHTML=titular.replace(/ .*/,'');
+      
+    
+     
+      
       return null;
     })
     
@@ -225,3 +248,12 @@ function trending() {
 }
 
 trending();
+
+// Tendencias Recomendadas al click
+let tendencia1= document.getElementById("tendencia1");
+let tendencia2= document.getElementById("tendencia2");
+let tendencia3= document.getElementById("tendencia3");
+
+tendencia1.addEventListener("click",function () {
+  console.log("hello");
+})

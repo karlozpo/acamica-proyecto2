@@ -17,10 +17,11 @@
     </div>
     <div class="container_site centrado top_35">
         <header class="contenedor espaciar_elementos">
+           
             <div class="logo"></div>
             <div class="botones_gif contenedor2">
                 <div class="margin_left_16">
-                    <a href="#" class="button">Crear Gif</a>
+                    <a href="create.html" class="button">Crear Gif</a>
                 </div>
 
                 <div class="custom-select">
@@ -45,38 +46,60 @@
                 <div class="container_search">
 
                     <input id="buscador" type="text" name="fname" value=""
-                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                        <button onclick="search()"><a href="#hola">Buscar</a></button>
+                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" autocomplete="off">
+                        <button onclick="search()">Buscar</button>
                     
-
+                 
+                </div>
+                <div id="resultados" style="">
+                   <div id="tendencia1" class="tendencia">#tendencias</div>
+                   <div id="tendencia2" class="tendencia">#tendencias</div>
+                   <div id="tendencia3" class="tendencia">#tendencias</div>
+                   <div id="tendencia4" class="tendencia" style="display: none;">#tendencias</div>
                 </div>
             </div>
             <div id="gifsContainer" class="contenedor_gifs"></div>
-            <h3 class="espaciado2">Hoy te sugerimos</h3>
+            <h3 id="sugerencias" class="espaciado2">Hoy te sugerimos</h3>
             <div id="gifsSugerencias" class="contenedor_gifs">
-                <div class="cuadroGif borde">
+                <div class="cuadroGif2 borde">
+                 <div class="contentTrending">
                     <div class="tituloTrending"></div>
-                    <img class="imgtrend" src="" alt="" width="auto">
+                    <div class="cerrar"><img src="./assets/close.svg" alt=""></div>
                 </div>
-                <div id="sug2" class="cuadroGif borde">
-                    <div class="tituloTrending"></div>
                     <img class="imgtrend" src="" alt="" width="auto">
+                    <a class="masLink" href="#" target="_blank"> <button class="verMas">Ver más</button></a>
                 </div>
-                <div id="sug3" class="cuadroGif borde">
-                    <div class="tituloTrending"></div>
-                    <img class="imgtrend" src="" alt="" width="auto">
-                </div>
-                <div id="sug4" class="cuadroGif">
-                    <div class="tituloTrending"></div>
-                    <img class="imgtrend" src="" alt="" width="auto">
-                </div>
+                <div class="cuadroGif2 borde">
+                    <div class="contentTrending">
+                       <div class="tituloTrending"></div>
+                       <div class="cerrar"><img src="./assets/close.svg" alt=""></div>
+                   </div>
+                       <img class="imgtrend" src="" alt="" width="auto">
+                       <a class="masLink" href="#" target="_blank"> <button class="verMas">Ver más</button></a>
+                   </div>
+                   <div class="cuadroGif2 borde">
+                    <div class="contentTrending">
+                       <div class="tituloTrending"></div>
+                       <div class="cerrar"><img src="./assets/close.svg" alt=""></div>
+                   </div>
+                       <img class="imgtrend" src="" alt="" width="auto">
+                       <a class="masLink" href="#" target="_blank"> <button class="verMas"> Ver más</button></a>
+                   </div>
+                   <div class="cuadroGif2 borde">
+                    <div class="contentTrending">
+                       <div class="tituloTrending"></div>
+                       <div class="cerrar"><img src="./assets/close.svg" alt=""></div>
+                   </div>
+                       <img class="imgtrend" src="" alt="" width="auto">
+                       <a class="masLink" href="#" target="_blank"> <button class="verMas">Ver más</button></a>
+                   </div>
 
             </div>
             <h3 id="tendencias" class="espaciado">Tendencias</h3>
             <div id="gifsTendencias" class="contenedor_gifs">
 
             </div>
-            <h3 name="hola" id="hola" class="espaciado">Tendencias</h3>
+            <div id="hola" style="height: 100px;"></div>
         </div>
         <script src="js/menu.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
