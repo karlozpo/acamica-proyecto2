@@ -72,8 +72,100 @@ body {
   align-items: center;
   justify-content: center;
 }
+.gifCreador{
+  width: 500px;
+  margin-left: auto;
+    margin-right: auto;
+    background: #E6E6E6;
+box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+}
+.centrar{
+  margin-left: auto;
+  margin-right: auto;
+}
+.capturar{
+  background: #F7C9F3;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+width: 144px;
+height: 36px;
+font-family: $fuente_regular;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.capturar2{
+  background: rgb(168, 45, 45);
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+width: 144px;
+height: 36px;
+font-family: $fuente_regular;
+color: white;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.capturar3{
+  background: rgb(181, 184, 183);
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+width: 144px;
+height: 36px;
+font-family: $fuente_regular;
+color: white;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+img#gifCaptura {
+  width: 490px;
+  margin-left: 5px;
+}
+video{
+  width: 490px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.camara{
+  background: #F7C9F3;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+height: 36px;
+width: 36px;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.camara2{
+  background:rgb(168, 45, 45);;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+height: 36px;
+width: 36px;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.camara3{
+  background:rgb(173, 173, 173);;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+height: 36px;
+width: 36px;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.wrap{
+  display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+  padding-bottom: 10px;
+}
 .tieneWrap {
-  flex-wrap: wrap;
+  
   justify-content: center;
 }
 #resultados { 
