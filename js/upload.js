@@ -1,3 +1,16 @@
+function allStorage() {
+
+  var values = [],
+      keys = Object.keys(localStorage),
+      i = keys.length;
+
+  while ( i-- ) {
+      values.push( localStorage.getItem(keys[i]) );
+  }
+console.log(keys);
+  return values;
+}
+allStorage();
 // Api
 const apiKey = "HfFHI1IWTIBPUa7JgXcE0M67VgBCex81";
 const apiBaseUrl = "https://api.giphy.com/v1/gifs/";
@@ -88,6 +101,11 @@ stop.addEventListener("click", function() {
     form.append("file", recorder.getBlob(), "carlos.gif");
     let gifcaptura= document.getElementById("gifCaptura");
     gifcaptura.src = URL.createObjectURL(recorder.getBlob());
+    document.getElementById("videoCaptura").setAttribute("style","display:none");
+    recorder.camera.stop();
+    recorder.destroy();
+    recorder = null;
+    
     console.log(form.get("file"));
     console.log(recorder.getBlob());
     // subimos nuestro gif
