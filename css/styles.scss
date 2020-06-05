@@ -35,6 +35,9 @@ body {
     background-image: url("../assets/gifOF_logo_dark.png");
   }
 }
+.fuente{
+  font-family: $fuente_regular;
+}
 .centrado {
   width: 80%;
   margin-left: auto;
@@ -80,6 +83,14 @@ body {
 box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 
 }
+.gifCreador2{
+  width: 500px;
+  margin-left: auto;
+    margin-right: auto;
+    background: #E6E6E6;
+box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+}
 .centrar{
   margin-left: auto;
   margin-right: auto;
@@ -95,6 +106,28 @@ display: flex;
 align-items: center;
   justify-content: center;
 }
+.capturar-btn{
+  background: #F7C9F3;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+width: 144px;
+height: 36px;
+font-family: $fuente_regular;
+display: flex;
+align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  a{
+    text-decoration: none;
+    display: block;
+    width: 144px;
+height: 36px;
+text-align: center;
+    padding-top: 13px;
+  }
+}
 .capturar2{
   background: rgb(168, 45, 45);
 border: 1px solid #110038;
@@ -108,6 +141,19 @@ align-items: center;
   justify-content: center;
 }
 .capturar3{
+  background: rgb(181, 184, 183);
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+width: 144px;
+height: 36px;
+font-family: $fuente_regular;
+color: white;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.capturar4{
+  margin-top: 10px;
   background: rgb(181, 184, 183);
 border: 1px solid #110038;
 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -139,6 +185,7 @@ align-items: center;
   justify-content: center;
 }
 .camara2{
+  float: left;
   background:rgb(168, 45, 45);;
 border: 1px solid #110038;
 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -149,6 +196,7 @@ align-items: center;
   justify-content: center;
 }
 .camara3{
+  float: left;
   background:rgb(173, 173, 173);;
 border: 1px solid #110038;
 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -167,6 +215,76 @@ align-items: center;
 .tieneWrap {
   
   justify-content: center;
+}
+#subiendoGif{
+  width: 490px;
+  height: 370px;
+  background-color: white;
+  margin-left: 5px;
+  font-family: $fuente_regular;
+  font-size: 16px;
+  color:$color_azul;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .gris{
+    color: rgba(17,0,56,0.64);
+  }
+}
+
+.contentFinal{
+  width: 290px !important;
+  margin-left: 5px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.contadorContenedor{
+  height: 27px;
+  width: 68px;
+  font-family: $fuente_regular;
+  font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+line-height: 22px;
+
+  background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+padding: 5px;
+padding-top: 8px;
+padding-bottom: 2px;
+float: left;
+margin-top: 18px;
+margin-left: 10px;
+}
+#b_recientes{
+  background-color: #E6E6E6;
+  min-height: 55px;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  ul{list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#E6E6E6;
+    padding: 5px;
+    
+
+  li{ 
+    font-family: $fuente_regular;
+    color: white;
+    font-size: 14px;
+    padding: 7px;
+    background: #4180F6;
+border: 1px solid #4C2F99;
+box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+margin-right: 10px;
+margin-top: 10px;
+cursor: pointer;
+  }
+}
 }
 #resultados { 
   display:none;
@@ -375,6 +493,7 @@ padding: 5px;
 }
 .espaciado2{
   margin-top: 15px;
+  margin-top: 55px;
 }
 .verMas{
   background: #4180F6;
@@ -410,6 +529,24 @@ a.masLink:hover {
   }
 
 }
+section.misGifs {
+  margin-top: 10px;
+}
+.cuadroGif3{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+  img{ float: left;
+    width: 24%;
+    height: 100%;
+    padding-right: 1%;
+    padding-bottom: 5px;
+  }
+
+}
+
+
 .cuadroGif2{
   width: 250px;
   height: 250px;
@@ -438,7 +575,7 @@ a.masLink:hover {
 .custom-select select {
   display: none; /*hide original SELECT element: */
 }
-
+#gifCreador1{display: none;}
 .select-selected {
   background-color: #f7c9f3;
   background-image: url("../assets/dropdown_2.svg");
@@ -552,6 +689,22 @@ a.masLink:hover {
     }
    
   }
+
+
+  .cuadroGif3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+    img{ float: left;
+      width: 48%;
+      height: 100%;
+      padding-right: 1%;
+      padding-bottom: 5px;
+    }
+  
+  }
+  
 
 }
 

@@ -22,23 +22,73 @@
             
 
         </header>
-         <div class="gifCreador ">
+        <div id="ventanaPaso1" class="gifCreador2">
             <div class="contentTrending">
-                <div class="tituloTrending">Un Chequeo Antes de Empezar</div>
+                <div class="tituloTrending">Crear Guifos</div>
+                <div class="cerrar"><img src="./assets/close.svg" alt=""></div>
+            </div>
+            <div style="width: 100%; padding: 5%;" class="fuente">
+            <div style="width: 15%; float: left;"> <img src="assets/window_img.png" alt="ventana"></div>
+            <div style="width: 70%; float: left; font-size: 12px;"> 
+            
+               <h4>Aquí podrás crear tus propios guifos</h4> 
+               <b>1)</b> Crear tu <b><i>guifo</i></b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son: <br>
+              Dar permisos de acceso a la cámara (sólo por el tiempo de uso) <br><br>
+              <b>2)</b>Capturar tu momento guifo<br><br>
+              <b>3)</b>Revisar el momento<br><br>
+              <b>4)</b>Listo para subir y compartir! <br><br>
+
+¿Quieres comenzar a crear tu <b><i>guifo</i></b> ahora?
+</div>
+            </div>
+            <div style="clear: both;">
+   
+            <div class="wrap"><div  class="capturar-btn">  <a href="index.html" target="_self"> Cancelar</a></div><div id="paso1" class="capturar-btn">Continuar</div></div>
+           
+        </div> 
+        </div>
+
+         <div id="gifCreador1" class="gifCreador">
+            <div class="contentTrending">
+                <div class="tituloTrending" id="tituloT">Un Chequeo Antes de Empezar</div>
                 <div class="cerrar"><img src="./assets/close.svg" alt=""></div>
             </div>
             
             <video id="videoCaptura"></video>
+            <div id="subiendoGif" >
+                <div>
+                <img src="./assets/globe_img.png" alt="">
+                <div>Estamos subiendo tu guifo…</div>
+                <img src="./assets/uploading.gif" alt="">
+                <div class="gris">Tiempo restante: <strike>38 años</strike> algunos minutos</div>
+            </div>
+            </div>
             <img id="gifCaptura" src="" alt="">
+            <div class="contadorContenedor" id="contadorFull">00:00:<span id="contador">00</span></div>
+            <div class="wrap">
+                
             <div class="wrap" id="start"><div class="camara"><img src="./assets/camera.svg" alt=""></div> <div id="capturar" class="capturar">Capturar</div></div>
             <div class="wrap" id="record"><div class="camara2"><img src="./assets/recording.svg" alt=""></div> <div id="capturar" class="capturar2">Iniciar</div></div>
             <div class="wrap" id="stop"><div class="camara3"><img src="./assets/recording.svg" alt=""></div> <div id="capturar" class="capturar3">Detener Grabación</div></div>
-         </div>
+             
+
+           
+            <div class="wrap" id="repetir"> <div id="capturar" class="capturar3">Repetir guifo</div></div>
+            <div class="wrap" id="subir"><div id="capturar" class="capturar">Subir Guifo</div></div>
+
+            <div class="wrap" id="gifFinal">
+            <div class="wrap" id="copiarLink"> <div id="capturar" class="capturar4">Copiar link Gif</div></div>
+            <div class="wrap" id="listo"><div id="capturar" class="capturar">listo</div></div>
+        </div>
+        </div> 
+        </div>
          
             <div id="hola" style="height: 100px;"></div>
         </div>
-        
+
         <script src="js/upload.js"></script>
+        
+
         <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
